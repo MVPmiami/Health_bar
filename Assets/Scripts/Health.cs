@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
 
-public class HealthController : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [SerializeField] protected float _maxHealth;
 
     private float _health;
 
-    public float MaxHealth => _maxHealth;
-    public float Health => _health;
-
     public event Action<float> HealthChanged;
+
+    public float MaxHealth => _maxHealth;
+    public float CurrentHealth => _health;
 
     private void Awake()
     {
